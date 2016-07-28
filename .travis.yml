@@ -1,0 +1,21 @@
+language: node_js
+node_js:
+- '6'
+env:
+- CXX=g++-4.8
+addons:
+  apt:
+    sources:
+    - ubuntu-toolchain-r-test
+    packages:
+    - g++-4.8
+scripts:
+- npm run build
+deploy:
+  provider: s3
+  access_key_id: AKIAI7MKGPRHR65CWF4Q
+  secret_access_key:
+    secure: sa3a2OCdOPuwbTEqgT0uHPEMu5WN/S2jl772CR5N4G5yviR8qZI/AK62jOrmZStI3vp0Gl7T/iPzTmFx9GtNkFrpYrnOV7HMs25gMgN++zuFzX6PDBFGvXHs0Kv5jfXX1P1lrFKoTmrRE/MlMJkYHF5EM7nHyJhBGJYumLoRQr7cEpkRfK1G7j58GmsdqobmmDsnkciwZu1+ZD1KGBgLhvmPjdIxSjJ9Avr20eUC0+IYZcJmNInr0Do4Tfaswdw6TPC3G5m+vdNNoODOhejD/XQIGPkE4iDym8KmK9eUeX6/l0flL2d+aklRUXNKXJU38s8YOW0mOTCen5Gj3+DMSB+prITFPJJxt6IiYipxmhqkNQPJ0Egv1iIGjswAlTLFwZ1UyNmrJf8RhEhXWKWTqg9n60grdCBDNqVGsHbTMNAvsDVGg9wy6X25Na80X6JYkkhSIK1GdxH3yISS/AHi5iL3tsY3ThfUEIIllqiX4UPWw19WCDggJKG2C3u0PYrZ4m3e44GzPhfeNaP5P63zshfYVOSRUgxtRuzeBLkxaTrbqM1XB3uN1Bea0NbEKhmAWCmYa2lb0xoNW1rryQgy5E96wVQE9JbZ900uhzMStmPtdiZ9V79OAZs6C1Ew5g4qjvaZPsO3jREOdO8rGSE9AQbq25wDwBnuCVc5Z6SQPl8=
+  bucket: ayeepersonalwebsite
+  skip_cleanup: true
+  local_dir: public
