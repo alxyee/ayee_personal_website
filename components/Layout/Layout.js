@@ -8,39 +8,47 @@
  * LICENSE.txt file in the root directory of this source tree.
  */
 
-import React, { PropTypes } from 'react';
+import React, {PropTypes} from 'react';
 import cx from 'classnames';
 import Header from './Header';
 import Footer from '../Footer';
 import s from './Layout.css';
 
+import './test.scss'
+
 class Layout extends React.Component {
 
-  static propTypes = {
-    className: PropTypes.string,
-  };
+    static propTypes = {
+        className: PropTypes.string,
+    };
 
-  componentDidMount() {
-    window.componentHandler.upgradeElement(this.root);
-  }
+    componentDidMount() {
+        window.componentHandler.upgradeElement(this.root);
+    }
 
-  componentWillUnmount() {
-    window.componentHandler.downgradeElements(this.root);
-  }
+    componentWillUnmount() {
+        window.componentHandler.downgradeElements(this.root);
+    }
 
-  render() {
-    return (
-      <div className="mdl-layout mdl-js-layout" ref={node => (this.root = node)}>
-        <div className="mdl-layout__inner-container">
-          <Header />
-          <main className="mdl-layout__content">
-            <div {...this.props} className={cx(s.content, this.props.className)} />
-            <Footer />
-          </main>
-        </div>
-      </div>
-    );
-  }
+    render() {
+        return (
+            <div className="mdl-layout mdl-js-layout" ref={node => (this.root = node)}>
+                <div className="mdl-layout__inner-container">
+                    <main className="mdl-layout__content" style={{paddingTop: '70px'}}>
+                        <div className="test">
+
+                        </div>
+                        <button
+                            style={{position: 'fixed', zIndex: '10', left: '20px', top: '20px'}}
+                            className="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored profile-btn">
+                            <i className="material-icons" style={{color:'white'}}>dashboard</i>
+                        </button>
+                        <div {...this.props} className={cx(s.content, this.props.className)}/>
+                    </main>
+                </div>
+            </div>
+        );
+    }
 }
 
 export default Layout;

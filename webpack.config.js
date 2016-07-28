@@ -90,6 +90,7 @@ const config = {
       {
         test: /\.jsx?$/,
         include: [
+          path.resolve(__dirname, './actions'),
           path.resolve(__dirname, './components'),
           path.resolve(__dirname, './core'),
           path.resolve(__dirname, './pages'),
@@ -117,7 +118,6 @@ const config = {
         loaders: [
           'style-loader',
           `css-loader?${JSON.stringify({ sourceMap: isDebug, minimize: !isDebug })}`,
-          'postcss-loader?pack=sass',
           'sass-loader',
         ],
       },
@@ -155,7 +155,6 @@ const config = {
 
   // The list of plugins for PostCSS
   // https://github.com/postcss/postcss
-  
   postcss(bundler) {
     return [
       // Transfer @import rule by inlining content, e.g. @import 'normalize.css'

@@ -11,47 +11,42 @@
 import React, {PropTypes} from 'react';
 import Layout from '../../components/Layout';
 import s from './styles.css';
-import {title, html} from './index.md';
 import {connect} from 'react-redux'
+
+import SquareCard from '../../components/square-card'
 
 
 class HomePageView extends React.Component {
 
-  static propTypes = {
-    articles: PropTypes.array.isRequired,
-  };
-
-  componentDidMount() {
-    document.title = title;
-  }
-
-  render() {
-    return (
-      <Layout className={s.content}>
-        <h1>Alex's website under construction! Proposed serverless architecture:</h1>
-        <img style = {{width: '800px', height: '400px'}} src = "https://s3-us-west-2.amazonaws.com/ayeepersonalwebsite/images/personalwebsitearchitecture.png"></img>
-      </Layout>
-    );
-  }
+    render() {
+        return (
+            <Layout className={s.content}>
+                <SquareCard/>
+                <h1>Alex's website under construction! Proposed serverless architecture:</h1>
+                <img style={{width: '800px', height: '400px'}}
+                     src="https://s3-us-west-2.amazonaws.com/ayeepersonalwebsite/images/personalwebsitearchitecture.png"></img>
+            </Layout>
+        );
+    }
 
 }
 
 const mapStateToProps = (state, ownProps) => {
-  return {}
+    return {}
 }
 
 const mapDispatchToProps = (dispatch, ownProps) => {
-  return {
-    buttonWasClicked: () => {
+    return {
+        buttonWasClicked: () => {
 
+        }
     }
-  }
 }
 
 const HomePage =
-  connect(
-    mapStateToProps,
-    mapDispatchToProps
-  )(HomePageView)
+    connect(
+        mapStateToProps,
+        mapDispatchToProps
+    )(HomePageView)
 
 export default HomePage;
