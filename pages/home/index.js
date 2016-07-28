@@ -10,21 +10,22 @@
 
 import React, {PropTypes} from 'react';
 import Layout from '../../components/Layout';
-import s from './styles.css';
+import './styles.scss'
 import {connect} from 'react-redux'
 
 import SquareCard from '../../components/square-card'
+import RectangleCard from '../../components/rectangle-card'
 
 
 class HomePageView extends React.Component {
-
     render() {
         return (
-            <Layout className={s.content}>
-                <SquareCard/>
-                <h1>Alex's website under construction! Proposed serverless architecture:</h1>
-                <img style={{width: '800px', height: '400px'}}
-                     src="https://s3-us-west-2.amazonaws.com/ayeepersonalwebsite/images/personalwebsitearchitecture.png"></img>
+            <Layout>
+                <div className = "mdl-grid home-container">
+                    <SquareCard className = {"mdl-cell mdl-cell--4-col med-cell--6-col-tablet"}/>
+                    <SquareCard className = {"mdl-cell mdl-cell--4-col med-cell--6-col-tablet"}/>
+                    <RectangleCard/>
+                </div>
             </Layout>
         );
     }
@@ -36,11 +37,7 @@ const mapStateToProps = (state, ownProps) => {
 }
 
 const mapDispatchToProps = (dispatch, ownProps) => {
-    return {
-        buttonWasClicked: () => {
-
-        }
-    }
+    return {}
 }
 
 const HomePage =

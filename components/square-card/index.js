@@ -1,4 +1,6 @@
 import React from 'react'
+import cx from 'classnames'
+import './square-card.scss'
 class SquareCard extends React.Component {
     constructor(props) {
         super(props);
@@ -6,7 +8,7 @@ class SquareCard extends React.Component {
 
     render() {
         return (
-            <div className="demo-card-square mdl-card mdl-shadow--2dp">
+            <div className={cx(this.props.className, "demo-card-square mdl-card mdl-shadow--2dp", "square-card")}>
                 <div className="mdl-card__title mdl-card--expand">
                     <h2 className="mdl-card__title-text">Update</h2>
                 </div>

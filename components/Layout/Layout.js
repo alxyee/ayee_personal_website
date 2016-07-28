@@ -10,11 +10,8 @@
 
 import React, {PropTypes} from 'react';
 import cx from 'classnames';
-import Header from './Header';
-import Footer from '../Footer';
-import s from './Layout.css';
 
-import './test.scss'
+import './layout.scss'
 
 class Layout extends React.Component {
 
@@ -34,16 +31,14 @@ class Layout extends React.Component {
         return (
             <div className="mdl-layout mdl-js-layout" ref={node => (this.root = node)}>
                 <div className="mdl-layout__inner-container">
-                    <main className="mdl-layout__content" style={{paddingTop: '70px'}}>
-                        <div className="test">
-
-                        </div>
+                    <main className="mdl-layout__content page-container">
+                        <div className = "hero-banner"></div>
                         <button
                             style={{position: 'fixed', zIndex: '10', left: '20px', top: '20px'}}
                             className="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored profile-btn">
                             <i className="material-icons" style={{color:'white'}}>dashboard</i>
                         </button>
-                        <div {...this.props} className={cx(s.content, this.props.className)}/>
+                        <div {...this.props} className={cx(this.props.className)}/>
                     </main>
                 </div>
             </div>
