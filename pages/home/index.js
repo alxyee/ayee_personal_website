@@ -28,11 +28,8 @@ class HomePageView extends React.Component {
   render() {
     return (
       <Layout className={s.content}>
-        <button className={"mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect"}
-                onClick={()=>{this.props.buttonWasClicked()}}>Click me now
-        </button>
+        <h1>Alex's website under construction! Proposed serverless architecture:</h1>
         <img style = {{width: '800px', height: '400px'}} src = "https://s3-us-west-2.amazonaws.com/ayeepersonalwebsite/images/personalwebsitearchitecture.png"></img>
-        <div>This is a boilerplate</div>
       </Layout>
     );
   }
