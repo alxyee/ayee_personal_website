@@ -31,6 +31,7 @@ class HomePageView extends React.Component {
         <button className={"mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect"}
                 onClick={()=>{this.props.buttonWasClicked()}}>Click me now
         </button>
+        <img style = {{width: '800px', height: '400px'}} src = "https://s3-us-west-2.amazonaws.com/ayeepersonalwebsite/images/personalwebsitearchitecture.png"></img>
         <div>This is a boilerplate</div>
       </Layout>
     );
