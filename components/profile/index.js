@@ -2,18 +2,16 @@ import {connect} from 'react-redux'
 import React from 'react'
 import './profile.scss'
 const ListItem = (props) => {
+    const {icon, title, subtitle} = props
     return (
-        <li className="mdl-list__item mdl-list__item--three-line">
-    <span className="mdl-list__item-primary-content">
-      <i className="material-icons mdl-list__item-avatar">person</i>
-      <span>Bryan Cranston</span>
+        <li className="mdl-list__item profile-list-item mdl-list__item--three-line">
+    <span className="mdl-list__item-primary-content" style = {{verticalAlign: 'bottom'}}>
+        {icon}
+        {title}
+        <br/>
       <span className="mdl-list__item-text-body">
-        Bryan Cranston played the role of Walter in Breaking Bad. He is also known
-        for playing Hal in Malcom in the Middle.
+          {subtitle}
       </span>
-    </span>
-    <span className="mdl-list__item-secondary-content">
-      <a className="mdl-list__item-secondary-action" href="#"><i className="material-icons">star</i></a>
     </span>
         </li>
     )
@@ -26,11 +24,22 @@ class ProfileView extends React.Component {
     }
 
     render() {
+        const {schoolProps} = this.props
         return (
             <div>
                 <ul className="demo-list-three mdl-list">
-                    <ListItem/>
-                    <ListItem/>
+                    {
+                        schoolProps
+                            .map(school=><ListItem
+                                icon={<img className = {"mdl-list__item-icon school-icon"} src = {school.get('icon')}/>}
+                                title={school.get('name')}
+                                subtitle={
+                                `${school.get('degree')}  ${school.get('major')}  ${school.get('end_date')}`
+                                }
+                            />)
+                    }
+                    <li style ={{textAlign: 'center'}}><i style = {{fontSize: '40px'}} className="fa fa-github" aria-hidden="true"></i></li>
+                    <li style ={{textAlign: 'center'}}><i style = {{fontSize: '40px'}} className="fa fa-linkedin" aria-hidden="true"></i></li>
                 </ul>
             </div>
         )
@@ -38,7 +47,9 @@ class ProfileView extends React.Component {
 }
 
 const mapStateToProps = (state, ownProps) => {
-    return {}
+    return {
+        schoolProps: state.content.getIn(['education', 'schools'], [])
+    }
 }
 
 const mapDispatchToProps = (dispatch, ownProps) => {

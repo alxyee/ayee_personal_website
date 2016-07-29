@@ -1,3 +1,15 @@
 .demo-list-three {
   width: 100%;
 }
+
+.school-icon{
+  width: 60px;
+  height: 60px;
+}
+
+.profile-list-item{
+  height: 100%;
+  >.mdl-list__item-primary-content{
+    height: 100%;
+  }
+}
