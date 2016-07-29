@@ -18,11 +18,25 @@ import Card from '../../components/card'
 
 class HomePageView extends React.Component {
     render() {
+        const {projects} = this.props
         return (
             <Layout>
-                <div className = "mdl-grid home-container">
-                    <Card className = {"mdl-cell mdl-cell--4-col med-cell--6-col-tablet"}/>
-                    <Card className = {"mdl-cell mdl-cell--4-col med-cell--6-col-tablet"}/>
+                <div className="mdl-grid home-container">
+                    {
+                        projects.map((project, idx)=>
+                            <Card
+                                key={idx}
+                                className={"mdl-cell mdl-cell--4-col med-cell--6-col-tablet"}
+                                title={project.get('name')}
+                                picture={project.get('picture_url')}
+                                video = {project.get('video')}
+                                tagline = {project.get('tagline')}
+                                description={project.get('description')}
+                                prize={project.get('prize')}
+                                url={project.get('url')}
+                            />
+                        )
+                    }
                 </div>
             </Layout>
         );
@@ -31,7 +45,11 @@ class HomePageView extends React.Component {
 }
 
 const mapStateToProps = (state, ownProps) => {
-    return {}
+    return {
+        projects: state.content
+            .getIn(['projects'])
+        // .filter(project=>project.get('type') === 'hackathon')
+    }
 }
 
 const mapDispatchToProps = (dispatch, ownProps) => {
