@@ -30,8 +30,8 @@ export default [
         "type": "side",
         "video": "4OW3qjnxZwg",
         "date": "2014",
-        "tagline": "8x8 fabric pressure sensor with 1 arduino",
-        "description": "",
+        "tagline": "8x8 fabric pressure sensor matrix with 1 arduino",
+        "description": "Created grid of 64 sensors with piezoresistive material (velostat) and conductive thread fed into 5 I/O Arduino pins and visualized using Processing",
         "tags": ["software", "hardware", "arduino"]
     },
     {
@@ -40,17 +40,19 @@ export default [
         "url": "http://www.hackster.io/490/paper-instruments?offset=0&ref=search&ref_id=paper+piano",
         "video": "KUcmU9eZOYk",
         "date": "2014",
-        "description": "",
+        "tagline": "Paper piano with swarm visualization",
+        "description": "Conductive ink connected to an Arduino, visuals using Processing",
         "tags": ["software", "hardware", "arduino", "processing"]
     },
     {
         "name": "Emoji Tracker",
         "type": "hackathon",
-        "prize": "Hardware Winner",
+        "prize": "Swift Hack Day Hardware Winner",
         "hackathon_title": "Swift Hack Day",
         "picture_url": "https://s3-us-west-2.amazonaws.com/ayeepersonalwebsite/images/swifthack.png",
         "date": "September 2014",
-        "description": "",
+        "tagline":"Wearable to track your movement throughout the day",
+        "description": "9-DOF IMU connected with bluetooth to an iOS app",
         "tags": ["hackathon", "software", "hardware", "bluetooth low energy (ble)"]
     },
     {
@@ -60,16 +62,18 @@ export default [
         "url": "http://filibuster-buster.weebly.com/",
         "picture_url": "https://s3-us-west-2.amazonaws.com/ayeepersonalwebsite/images/wrestler.jpg",
         "date": "2013",
-        "description": "",
+        "tagline":"Self driving sumo wrestling robot!",
+        "description": "Yes it's exactly what you think, it's sole purpose is to knock out other robots from a ring",
         "tags": ["stanford", "mechatronics", "hardware", "software", "arduino"]
     },
     {
-        "name": "3D Printed Adjustable Force Split Hook Prosthetic",
+        "name": "Adjustable Force Prosthetic",
         "type": "school",
         "course_title": "ME 294L Medical Device Design",
         "picture_url": "https://s3-us-west-2.amazonaws.com/ayeepersonalwebsite/images/SplitHook5.JPG",
         "date": "2012",
-        "description": "",
+        "tagline": "3D printed split hook prosthetic",
+        "description": "Designed using Solidworks (CAD) for single hand force tuning",
         "tags": ["stanford", "health", "hardware", "mechanical engineering", "cad"]
     },
     {
@@ -78,7 +82,8 @@ export default [
         "course_title": "CS 235 - Applied Robot Design",
         "picture_url": "https://s3-us-west-2.amazonaws.com/ayeepersonalwebsite/images/robot.jpg",
         "date": "2012",
-        "description": "",
+        "tagline": "3 weeks of designing, rapid prototyping, and integration...",
+        "description": "and it moves and plays chess!",
         "tags": ["stanford", "mechatronics", "cad", "mechanical engineering", "rapid prototyping"]
     },
     {
@@ -87,7 +92,8 @@ export default [
         "course_title": "BIOE 374 A/B - Biodesign Innovation",
         "picture_url": "https://s3-us-west-2.amazonaws.com/ayeepersonalwebsite/images/biodesign.jpg",
         "date": "2012",
-        "description": "",
+        "tagline": "Helping physicians visualize infected bone (osteomyelitis)",
+        "description": "Combination of fluorescent bacterial dye and image processing Matlab script",
         "tags": ["stanford", "health", "matlab", "software", "bio"]
     },
     {
@@ -96,7 +102,8 @@ export default [
         "course_title": "ME 382 A/B - Biomedical Engineering in Research and Development",
         "picture_url": "https://s3-us-west-2.amazonaws.com/ayeepersonalwebsite/images/bone.jpg",
         "date": "2012",
-        "description": "",
+        "tagline": "Increasing bone cell proliferation in scaffolds for long bone voids",
+        "description": "Structural optimization with Finite Element Analysis to maximize blood flow to seeded stem cells",
         "tags": ["stanford", "health", "cad", "bio"]
     }
 ]
