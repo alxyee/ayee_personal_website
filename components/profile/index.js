@@ -5,7 +5,7 @@ const ListItem = (props) => {
     const {icon, title, subtitle} = props
     return (
         <li className="mdl-list__item profile-list-item mdl-list__item--three-line">
-    <span className="mdl-list__item-primary-content" style = {{verticalAlign: 'bottom'}}>
+    <span className="mdl-list__item-primary-content" style={{verticalAlign: 'bottom'}}>
         {icon}
         {title}
         <br/>
@@ -13,6 +13,20 @@ const ListItem = (props) => {
           {subtitle}
       </span>
     </span>
+        </li>
+    )
+}
+
+const SocialLink = (props) => {
+    const {link, label, icon} = props
+    return (
+        <li className="social-links" onClick={()=>{window.location.href = link}}>
+            <i
+                className={`fa fa-${icon}`}
+                aria-hidden="true"></i>
+            <span style={{verticalAlign: 'bottom'}}>
+            {label}
+                </span>
         </li>
     )
 }
@@ -28,18 +42,37 @@ class ProfileView extends React.Component {
         return (
             <div>
                 <ul className="demo-list-three mdl-list">
-                    {
-                        schoolProps
-                            .map(school=><ListItem
-                                icon={<img className = {"mdl-list__item-icon school-icon"} src = {school.get('icon')}/>}
-                                title={school.get('name')}
-                                subtitle={
+                    <section className="menu-section">
+                        <h3 className="menu-section-title">About Me</h3>
+                        <ListItem
+                            icon = {<img className = {"mdl-list__item-icon school-icon"} src = {"https://s3-us-west-2.amazonaws.com/ayeepersonalwebsite/images/profile.jpg"}/>}
+                            title={"Alex Yee"}
+                            subtitle={"Software Engineer at Lyra Health"}
+                        />
+                        {
+                            schoolProps
+                                .map(school=><ListItem
+                                    icon={<img className = {"mdl-list__item-icon school-icon"} src = {school.get('icon')}/>}
+                                    title={school.get('name')}
+                                    subtitle={
                                 `${school.get('degree')}  ${school.get('major')}  ${school.get('end_date')}`
                                 }
-                            />)
-                    }
-                    <li style ={{textAlign: 'center'}}><i style = {{fontSize: '40px'}} className="fa fa-github" aria-hidden="true"></i></li>
-                    <li style ={{textAlign: 'center'}}><i style = {{fontSize: '40px'}} className="fa fa-linkedin" aria-hidden="true"></i></li>
+                                />)
+                        }
+                    </section>
+                    <section className="menu-section">
+                        <h3 className="menu-section-title">Links</h3>
+                        <SocialLink
+                            link="https://github.com/alxyee"
+                            icon="github"
+                            label="Github"
+                        />
+                        <SocialLink
+                            link="https://www.linkedin.com/in/alexyee1"
+                            icon="linkedin"
+                            label="Linkedin"
+                        />
+                    </section>
                 </ul>
             </div>
         )

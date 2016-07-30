@@ -47,17 +47,19 @@ class Layout extends React.Component {
                         <Profile/>
                     </nav>
                     <main id="panel" className="mdl-layout__content page-container">
-
-                        <div className="hero-banner"></div>
                         <button
-                            style={{position: 'fixed', zIndex: '10', left: '20px', top: '20px'}}
+                            style={{position: 'absolute', zIndex: '10', left: '20px', top: '20px'}}
                             className="toggle-button mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored profile-btn">
-                            <i className="material-icons" style={{color:'white'}}>dashboard</i>
+                            <i className="material-icons" style={{color:'white'}}>dehaze</i>
                         </button>
 
-                        <h3  style={{fontWeight: '100', position: 'fixed', zIndex: '10', left: '85px', top: '5px'}}>
-                            Alex Yee
-                        </h3>
+                        {
+                            /*
+                             <div className="hero-banner"></div>
+                             */
+                        }
+
+
 
                         <div {...this.props} className={cx(this.props.className)}/>
                     </main>
