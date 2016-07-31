@@ -40,7 +40,7 @@ class Card extends React.Component {
     render() {
         const {title, description, tagline, picture, prize, url, video} = this.props
         return (
-            <div className={cx(this.props.className, "demo-card-square mdl-card mdl-shadow--4dp", "card")}>
+            <div className={cx(this.props.className, "mdl-card mdl-shadow--4dp", "card")}>
                 {video ? this._showVideo(video) : (
                     <div className="mdl-card__title mdl-card--expand"
                          style={{background: `url('${picture}') center no-repeat`}}>

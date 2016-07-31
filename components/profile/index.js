@@ -18,9 +18,9 @@ const ListItem = (props) => {
 }
 
 const SocialLink = (props) => {
-    const {link, label, icon} = props
+    const {onClick, label, icon} = props
     return (
-        <li className="social-links" onClick={()=>{window.location.href = link}}>
+        <li className="social-links" onClick={onClick}>
             <i
                 className={`fa fa-${icon}`}
                 aria-hidden="true"></i>
@@ -44,11 +44,13 @@ class ProfileView extends React.Component {
                 <ul className="demo-list-three mdl-list">
                     <section className="menu-section">
                         <h3 className="menu-section-title">About Me</h3>
-                        <ListItem
-                            icon = {<img className = {"mdl-list__item-icon school-icon"} src = {"https://s3-us-west-2.amazonaws.com/ayeepersonalwebsite/images/profile.jpg"}/>}
-                            title={"Alex Yee"}
-                            subtitle={"Software Engineer at Lyra Health"}
-                        />
+                        <header className="menu-header">
+                            <img src={"https://s3-us-west-2.amazonaws.com/ayeepersonalwebsite/images/profile.jpg"}/>
+                            <h4>
+                                Alex Yee
+                            </h4>
+                            <p>Software Engineer at Lyra Health</p>
+                        </header>
                         {
                             schoolProps
                                 .map(school=><ListItem
@@ -63,14 +65,19 @@ class ProfileView extends React.Component {
                     <section className="menu-section">
                         <h3 className="menu-section-title">Links</h3>
                         <SocialLink
-                            link="https://github.com/alxyee"
+                            onClick = {()=>{window.location.href = "https://github.com/alxyee"}}
                             icon="github"
                             label="Github"
                         />
                         <SocialLink
-                            link="https://www.linkedin.com/in/alexyee1"
+                            onClick = {()=>{window.location.href = "https://www.linkedin.com/in/alexyee1"}}
                             icon="linkedin"
                             label="Linkedin"
+                        />
+                        <SocialLink
+                            onClick = {()=>{window.location.href = "mailto:alxyee1@gmail.com";}}
+                            icon="envelope"
+                            label="Email"
                         />
                     </section>
                 </ul>
