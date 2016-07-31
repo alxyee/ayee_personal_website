@@ -62,7 +62,7 @@ class SkillsView extends React.Component {
             "mdl-cell--4-col-tablet",
             "mdl-cell--4-col-desktop")}
                  style={{display: 'flex'}}>
-                <div className={cx("demo-card-square mdl-card mdl-shadow--2dp", "card", "introduction-card")}
+                <div className={cx("demo-card-square mdl-card mdl-shadow--2dp", "card", "introduction-card", "skills-card")}
                      style={{width: '100%'}}>
                     <h3>
                        Skills

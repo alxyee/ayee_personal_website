@@ -43,6 +43,11 @@
 .introduction-card{
   text-align: center;
   padding: 30px;
+
+  &.skills-card{
+    color: white;
+    background-color: #3E4EB8;
+  }
   h3{
     font-family: Great Vibes;
   }
