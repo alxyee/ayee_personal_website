@@ -47,6 +47,14 @@
   &.skills-card{
     color: white;
     background-color: #3E4EB8;
+    text-align: left;
+    h3{
+      margin-bottom: 10px;
+    }
+    li{
+      font-family: Roboto;
+      font-weight:100;
+    }
   }
   h3{
     font-family: Great Vibes;

@@ -28,7 +28,8 @@ class Introduction extends React.Component {
             <div className={cx("mdl-cell",
             "mdl-cell--8-col-phone",
             "mdl-cell--8-col-tablet",
-            "mdl-cell--8-col-desktop")}>
+            "mdl-cell--8-col-desktop")}
+                 style={{display: 'flex'}}>
                 <div className={cx("demo-card-square mdl-card mdl-shadow--2dp", "card", "introduction-card")}
                      style={{width: '100%'}}>
                     <h3>Hi! I'm Alex Yee</h3>
@@ -62,15 +63,25 @@ class SkillsView extends React.Component {
             "mdl-cell--4-col-tablet",
             "mdl-cell--4-col-desktop")}
                  style={{display: 'flex'}}>
-                <div className={cx("demo-card-square mdl-card mdl-shadow--2dp", "card", "introduction-card", "skills-card")}
-                     style={{width: '100%'}}>
+                <div
+                    className={cx("demo-card-square mdl-card mdl-shadow--2dp", "card", "introduction-card", "skills-card")}
+                    style={{width: '100%'}}>
                     <h3>
-                       Skills
+                        Skills
                     </h3>
-                    <p>
-                        ReactJS (ES6), Redux, Webpack, websockets, ElasticSearch, AWS (Lambda, Elastic Beanstalk, S3,
-                        API Gateway)
-                    </p>
+                    <ul style={{listStyle: "none"}}>
+                        {
+                            [
+                                "ReactJS/Redux (ES6)",
+                                "Webpack",
+                                "Websockets",
+                                "ElasticSearch",
+                                "AWS (Lambda, Elastic Beanstalk, S3, API Gateway)",
+                                "Node.js"
+                            ].map(skill =>
+                                <li>{skill}</li>)
+                        }
+                    </ul>
 
                 </div>
             </div>
