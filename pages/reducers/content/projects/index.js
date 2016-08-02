@@ -84,7 +84,7 @@ export default [
         "date": "2012",
         "tagline": "3 weeks of designing, rapid prototyping, and integration...",
         "description": "and it moves and plays chess!",
-        "tags": ["stanford", "mechatronics", "cad", "mechanical engineering", "rapid prototyping"]
+        "tags": ["stanford", "mechatronics", "hardware", "cad", "mechanical engineering", "rapid prototyping"]
     },
     {
         "name": "Bone Infection Detection Software",
@@ -104,6 +104,6 @@ export default [
         "date": "2012",
         "tagline": "Increasing bone cell proliferation in scaffolds for long bone voids",
         "description": "Structural optimization with Finite Element Analysis to maximize blood flow to seeded stem cells",
-        "tags": ["stanford", "health", "cad", "bio"]
+        "tags": ["stanford", "health", "cad", "bio", "hardware"]
     }
 ]

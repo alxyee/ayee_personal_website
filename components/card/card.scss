@@ -41,7 +41,7 @@
 }
 
 .introduction-card{
-  text-align: center;
+  text-align: left;
   padding: 30px;
 
   &.skills-card{
@@ -51,13 +51,16 @@
     h3{
       margin-bottom: 10px;
     }
+    ul{
+      padding-left: 15px;
+    }
     li{
       font-family: Roboto;
       font-weight:100;
     }
   }
   h3{
-    font-family: Great Vibes;
+    font-family: "Nothing You Could Do";
   }
   p{
     font-weight: 100;
