@@ -9,13 +9,22 @@ class Card extends React.Component {
         super(props);
     }
 
-    _displayPrize(prize) {
+    _displayPrize(hackathon_title, prize) {
+        console.log(hackathon_title)
+        // <Tooltip className={"prize-tooltip"}
+        //          label={<span className = "is-active">{prize}</span>}
+        //          position={'right'}
+        //          children={<i className="material-icons" style={{fontSize: '30px', color:'rgb(255, 235, 59)'}}>star</i>}
+        //          large={true}/>
         return (
-            <Tooltip className={"prize-tooltip"}
-                     label={<span className = "is-active">{prize}</span>}
-                     position={'right'}
-                     children={<i className="material-icons" style={{fontSize: '30px', color:'rgb(255, 235, 59)'}}>star</i>}
-                     large={true}/>
+            <div className="prize">
+                <i style={{verticalAlign: 'top', fontSize: '30px', color:'rgb(255, 235, 59)'}} className="fa fa-trophy"
+                   aria-hidden="true"></i>
+                <div className = "prize-content">
+                    <div>{hackathon_title}</div>
+                    <div>{prize}</div>
+                </div>
+            </div>
         )
     }
 
@@ -38,7 +47,7 @@ class Card extends React.Component {
     }
 
     render() {
-        const {title, description, tagline, picture, prize, url, video} = this.props
+        const {title, description, tagline, picture, prize, url, video, hackathon_title} = this.props
         return (
             <div className={cx(this.props.className, "mdl-card mdl-shadow--4dp", "card")}>
                 {video ? this._showVideo(video) : (
@@ -46,13 +55,13 @@ class Card extends React.Component {
                          style={{background: `url('${picture}') center no-repeat`}}>
                         <div className="fuzzy-cover">
                             <h2 className="mdl-card__title-text">{title}</h2>
-                            {prize ? this._displayPrize(prize) : []}
                         </div>
                     </div>
                 )}
 
                 <div className="mdl-card__supporting-text">
-                    <h6><i>{tagline}</i></h6>
+                    {prize ? this._displayPrize(hackathon_title, prize) : []}
+                    <div className = "tagline"><i>{tagline}</i></div>
                     {description}
                 </div>
                 {url ? this._seeMore(url) : []}

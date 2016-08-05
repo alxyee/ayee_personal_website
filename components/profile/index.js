@@ -45,7 +45,7 @@ class ProfileView extends React.Component {
                     <section className="menu-section">
                         <h3 className="menu-section-title">About Me</h3>
                         <header className="menu-header">
-                            <img src={"https://s3-us-west-2.amazonaws.com/ayeepersonalwebsite/images/profile.jpg"}/>
+                            <img src={"https://s3-us-west-2.amazonaws.com/ayeepersonalwebsite/images/profile.png"}/>
                             <h4>
                                 Alex Yee
                             </h4>

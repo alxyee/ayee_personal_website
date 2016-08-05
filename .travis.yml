@@ -11,11 +11,3 @@ addons:
     - g++-4.8
 scripts:
 - npm run build
-deploy:
-  provider: s3
-  access_key_id: AKIAI7MKGPRHR65CWF4Q
-  secret_access_key:
-    secure: jOYrzcNQp11UmsvSCJOe0FK+msQwhL2sSE8Psoh8OtX+XYUdY7Jlakl22W8ebReQPBEbTZ3kPX2Z5lezRYfYddiJPNuuK6TUN16AkQ4WLGH7oAQxpzZbhvkJHYIXYRu7466NLIVooSxWP38JAOslQz8wS+7HnFYVKJ6hoYw8nz6ZYXr58H6YqLESL5Dhj0OsmCdA5ps/E+arCkkobuJnR9MMF900gO09OVgap5CF9QWiBvOwuxDMPRyXo21Yz2I86DiR+0Au+3YJKchVf9+icpLMx3rPjQj2UN8NXpoAqyrFQycC8MBwnQ7Iu+Xd0JiuEV0lGwN6WfqhEqr/so01S2ixENFg/6zhswOKruju1SwblX5B11Ev2dxWNRffpzrbIwEgjINSLuU+HXafYw+fb9VOblHbPkgqSLdqiE0kHXnEOUJmEwsr1TiaHy0OYI1aDUMc/V9RThf0CMU+7BDxGDPdvlmvFhmi2HAMa7cUo1VB93VoUPBpTtM0PofhqbketZMHxSuyj35h3wjX0Q/cqq4NAjEJdb9LAiN+mz5fIaba4paKUJkLw/4ZkuDJLHPSKOY6UmMtZUJq0uIqjzNAEmd4YT0/fpSlvOmirmxGevdj/ks8DVDb3HkNJjKKJzbpFLQHsdH4U1Ys0SqgOuQ8UHptIhplimTdmqkKOdTq10o=
-  bucket: ayeepersonalwebsite
-  skip_cleanup: true
-  local_dir: public

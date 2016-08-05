@@ -8,14 +8,15 @@
     }
   },
   {
+    "path": "/:id",
+    "page": "./pages/about"
+  },
+  {
     "path": "/error",
     "page": "./pages/error",
     "chunk": "main"
   },
-  {
-    "path": "/about",
-    "page": "./pages/about"
-  },
+
   {
     "path": "/tasks/:status(pending|completed)?",
     "page": "./pages/home"
